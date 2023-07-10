@@ -1,6 +1,5 @@
 <div class="card border-secondary mb-3">
     <div class="card-body text-secondary">
-      <h5 class="card-title">Listado de clientes</h5>
 
       <div class="my-2 text-left">
         <a [routerLink]="['/formulario']" 
@@ -21,8 +20,7 @@
                 <th>Apellido</th>
                 <th>Email</th>
                 <th>Fecha</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -34,11 +32,15 @@
                 <td>{{ cliente.createAt }}</td>
                 <td>
                     <button type="button" 
+                    class="btn btn-primary"
+                    [routerLink]="['/formulario', cliente.id]" 
+                    >Ver</button>
+                    &nbsp;
+                    <button type="button" 
                     class="btn btn-secondary"
                     [routerLink]="['/formulario', cliente.id]" 
                     >Editar</button>
-                </td>
-                <td>
+                    &nbsp;
                     <button type="button" 
                     class="btn btn-danger"
                     (click)="deleteAlert(cliente)" 
