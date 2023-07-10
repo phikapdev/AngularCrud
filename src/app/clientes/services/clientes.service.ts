@@ -13,7 +13,7 @@ import { Cliente } from '../interfaces/cliente';
 export class ClientesService {
 
   // Api de SpringBoot
-  private urlEndPoint: string = "http://localhost:8080/api/clientes"
+  private urlEndPoint: string = "http://192.168.9.119:5986/api/clientes"
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
