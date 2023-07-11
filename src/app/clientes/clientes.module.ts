@@ -6,12 +6,14 @@ import { FormularioComponent } from './pages/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { SharedModule } from '../shared/shared.module';
+import { DetalleComponent } from './pages/detalle/detalle.component';
 
 @NgModule({
   declarations: [
     ListadoComponent,
     FormularioComponent,
-    HomeComponent
+    HomeComponent,
+    DetalleComponent
   ],
   imports: [
     CommonModule,

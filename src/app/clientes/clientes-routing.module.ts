@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
+import { DetalleComponent } from './pages/detalle/detalle.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'formulario/:id',
         component: FormularioComponent
+      },
+      {
+        path: 'detalle/:id',
+        component: DetalleComponent
       },
       {
         path: '**',
