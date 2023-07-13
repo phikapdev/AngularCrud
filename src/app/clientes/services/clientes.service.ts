@@ -14,7 +14,6 @@ export class ClientesService {
 
   // Api de SpringBoot
   private urlEndPoint: string = "http://192.168.9.119:5986/api/clientes"
-
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient,
@@ -37,7 +36,7 @@ export class ClientesService {
           icon:'error'
         })
 
-        return throwError(e)
+        return throwError(() => ('error'))
       })
     )
   }
@@ -49,7 +48,7 @@ export class ClientesService {
       map((response: any) => response.cliente as Cliente),
       catchError(e => {
         if(e.status ==400){
-          return throwError(e)
+          return throwError(() => ('error'))
         }
         console.error(e.error.mensaje);
         Swal.fire({
@@ -57,7 +56,7 @@ export class ClientesService {
           text: e.error.mensaje,
           icon:'error'
         })
-        return throwError(e)
+        return throwError(() => ('error'))
       })
     )
   }
@@ -68,7 +67,7 @@ export class ClientesService {
     .pipe(
       catchError(e => {
         if(e.status ==400){
-          return throwError(e)
+          return throwError(() => ('error'))
         }
         console.error(e.error.mensaje);
         Swal.fire({
@@ -76,7 +75,7 @@ export class ClientesService {
           text: e.error.mensaje,
           icon:'error'
         })
-        return throwError(e)
+        return throwError(() => ('error'))
       })
     )
   }
@@ -91,7 +90,7 @@ export class ClientesService {
           text: e.error.mensaje,
           icon:'error'
         })
-        return throwError(e)
+        return throwError(() => ('error'))
       })
     )
   }
